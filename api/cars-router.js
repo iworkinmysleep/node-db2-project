@@ -32,7 +32,8 @@ router.post("/", (req, res) => {
 	db("cars")
 		.insert(newCar)
 		.then((ids) => {
-			db("cars").where({ id: ids[0] });
+      db("cars").where({ id: ids[0] });
+      res.send('Car successfully added!')
 		})
 		.then((carEntry) => {
 			res.status(201).json(carEntry);
