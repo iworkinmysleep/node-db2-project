@@ -6,8 +6,8 @@ exports.up = function (knex, Promise) {
 		tbl.text("make", 128).notNullable();
 		tbl.text("model", 128).notNullable();
 		tbl.float("mileage").notNullable();
-		tbl.text("transmission type", 128);
-		tbl.text("title status", 128);
+		tbl.text("transmissionType", 128);
+		tbl.text("titleStatus", 128);
 	});
 };
 
